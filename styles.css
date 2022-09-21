@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Roboto&display=swap");
+
 body {
   margin: 0;
 }
@@ -48,16 +50,23 @@ body {
 
 .intro-form p {
   margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.intro-form a {
+  font-family: "Roboto", sans-serif;
 }
 
 .hello {
   font-size: 32px;
+  font-family: "Inter", sans-serif;
 }
 
 .welcome {
   font-size: 40px;
   -webkit-text-stroke: 1px #000;
   -webkit-text-fill-color: #1a64bc;
+  font-family: "Inter", sans-serif;
 }
 
 .form-text {
