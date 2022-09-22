@@ -42,26 +42,41 @@
         ></a-asset-item>
       </a-assets>
 
-      <a-entity
-        look-at="[gps-camera]"
-        animation-mixer="loop: repeat"
-        gltf-model="#animated-asset"
-        scale="0.5834747265835469 0.5834747265835469 0.5834747265835469"
-        gps-entity-place="latitude: 17.424195; longitude: 78.3354502;"
-      ></a-entity>
+      <a-camera gps-camera rotation-reader>
+        <a-text
+          value="camera"
+          look-at="[gps-camera]"
+          animation-mixer="loop: repeat"
+          gltf-model="#animated-asset"
+          scale="5 5 5"
+          gps-entity-place="latitude: 17.424195; longitude: 78.3354502;"
+        ></a-text>
 
-      <a-entity
-        look-at="[gps-camera]"
-        animation-mixer="loop: repeat"
-        gltf-model="#animated-asset1"
-        scale="0.5834747265835469 0.5834747265835469 0.5834747265835469"
-        gps-entity-place="latitude:19.17214775646252, ; longitude: 72.87014490386126;"
-      ></a-entity>
+        <a-text
+          look-at="[gps-camera]"
+          animation-mixer="loop: repeat"
+          gltf-model="#animated-asset1"
+          scale="5 5 5 "
+          gps-entity-place="latitude:19.17214775646252, ; longitude: 72.87014490386126;"
+        ></a-text>
 
-      <a-camera
-        gps-camera=" simulateLatitude :17.424195 ; simulateLongitude : 78.3354502"
-        rotation-reader
-      ></a-camera>
+        <a-unity
+          value="camera"
+          look-at="[gps-camera]"
+          animation-mixer="loop: repeat"
+          gltf-model="#animated-asset"
+          scale="0.5834747265835469 0.5834747265835469 0.5834747265835469"
+          gps-entity-place="latitude: 17.424195; longitude: 78.3354502;"
+        ></a-unity>
+
+        <a-unity
+          look-at="[gps-camera]"
+          animation-mixer="loop: repeat"
+          gltf-model="#animated-asset1"
+          scale="0.5834747265835469 0.5834747265835469 0.5834747265835469"
+          gps-entity-place="latitude:19.17214775646252, ; longitude: 72.87014490386126;"
+        ></a-unity>
+      </a-camera>
     </a-scene>
   </body>
 </html>
