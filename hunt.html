@@ -23,12 +23,27 @@
         ></a-asset-item>
       </a-assets>
 
+      <a-assets>
+        <a-asset-item
+          id="animated-asset1"
+          src="assets/asset.gltf"
+        ></a-asset-item>
+      </a-assets>
+
       <a-entity
         look-at="[gps-camera]"
         animation-mixer="loop: repeat"
         gltf-model="#animated-asset"
         scale="0.5834747265835469 0.5834747265835469 0.5834747265835469"
         gps-entity-place="latitude: 17.4241995; longitude: 78.3354502;"
+      ></a-entity>
+
+      <a-entity
+        look-at="[gps-camera]"
+        animation-mixer="loop: repeat"
+        gltf-model="#animated-asset1"
+        scale="0.5834747265835469 0.5834747265835469 0.5834747265835469"
+        gps-entity-place="latitude: 12.9558577; longitude: 77.7065115;"
       ></a-entity>
 
       <a-camera gps-camera rotation-reader></a-camera>
