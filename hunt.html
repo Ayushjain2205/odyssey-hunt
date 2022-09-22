@@ -59,26 +59,26 @@
         align="center"
       ></a-text>
 
+      <a-entity
+        look-at="[gps-camera]"
+        animation-mixer=""
+        gltf-model="#animated-asset1"
+        scale="0.5834747265835469 0.5834747265835469 0.5834747265835469"
+        gps-entity-place="latitude:19.1713706, ; longitude: 72.8694649 ;"
+      ></a-entity>
+
       <a-camera
         locationfinder
-        gps-camera="simulateLatitude :17.424195 ; simulateLongitude : 78.3354502; minDistance: 5;"
+        gps-camera="simulateLatitude :19.1713706 ; simulateLongitude : 72.8694649; minDistance: 5;"
         rotation-reader
       >
         <a-entity
           value="camera"
           look-at="[gps-camera]"
-          animation-mixer="loop: repeat"
+          animation-mixer=""
           gltf-model="#animated-asset"
           scale="0.5834747265835469 0.5834747265835469 0.5834747265835469"
           gps-entity-place="latitude: 17.424195; longitude: 78.3354502;"
-        ></a-entity>
-
-        <a-entity
-          look-at="[gps-camera]"
-          animation-mixer="loop: repeat"
-          gltf-model="#animated-asset1"
-          scale="0.5834747265835469 0.5834747265835469 0.5834747265835469"
-          gps-entity-place="latitude:19.17214775646252, ; longitude: 72.87014490386126;"
         ></a-entity>
       </a-camera>
     </a-scene>
@@ -87,7 +87,7 @@
       AFRAME.registerComponent("locationfinder", {
         init: function () {
           navigator.geolocation.getCurrentPosition(function (location) {
-            console.log(location.coords.longitude);
+            console.log(location.coords.longitude, location.coords.latitude);
           });
         },
       });
